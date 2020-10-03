@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <main class="container-main">
+        <h1 class="heading-primary">tip calculator</h1>
+
+        <section class="container-bill">
+            <ul class="item-container">
+                <li class="item">
+                    <label for="bill" class="title">Bill</label>
+                    <input type="number" name="bill" id="bill" min="0" placeholder="Your bill" autofocus tabindex="1" class="js--field">
+                </li>
+                <li class="item">
+                    <label for="tip-selection" class="title">Select tip</label>
+                    <p class="detail js--detail js--tipValue">0%</p>
+                    <input type="range" name="tip-selection" id="tip-selection" value="0" tabindex="2" class="js--field">
+                </li>
+                <li class="item">
+                    <h2 class="title">Tip</h2>
+                    <p class="detail js--detail">$ 0.00</p>
+                </li>
+                <li class="item">
+                    <h2 class="title">Total</h2>
+                    <p class="detail js--detail">$ 0.00</p>
+                </li>
+            </ul>
+        </section>
+        <section class="container-split">
+            <ul class="item-container">
+                <li class="item">
+                    <label for="split-selection" class="title">Split</label>
+                    <p class="detail js--detail js--splitValue">1 person</p>
+                    <input type="range" name="split-selection" id="split-selection" max="10" min="1" value="0" tabindex="3" class="js--field">
+                </li>
+                <li class="item">
+                    <h2 class="title">Bill each</h2>
+                    <p class="detail js--detail">$ 0.00</p>
+                </li>
+                <li class="item">
+                    <h2 class="title">Tip each</h2>
+                    <p class="detail js--detail">$ 0.00</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
