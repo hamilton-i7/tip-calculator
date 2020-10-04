@@ -28,6 +28,12 @@ body {
           justify-content: center;
 }
 
+@media only screen and (max-height: 515px) {
+  body {
+    height: 100%;
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -181,6 +187,12 @@ input[type="range"]:focus::-ms-fill-upper {
   padding-bottom: 10%;
   row-gap: 1.2rem;
   width: 90%;
+}
+
+@media only screen and (max-height: 515px) {
+  .container {
+    margin: 5rem 0;
+  }
 }
 
 .container > :not(:first-child) {

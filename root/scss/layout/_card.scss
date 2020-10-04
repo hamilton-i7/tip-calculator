@@ -12,6 +12,10 @@
     row-gap: 1.2rem;
     width: 90%;
 
+    @media only screen and (max-height: 515px) {
+        margin: 5rem 0;
+    }
+
     & > :not(:first-child) {
         background-color: $color-neutral-1;
         border-radius: 1rem;
