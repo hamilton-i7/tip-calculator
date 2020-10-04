@@ -1,8 +1,10 @@
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+@import "abstracts/variables";
+
 @import "base/reset";
 @import "base/typography";
 
-@import "layout/card";
+@import "components/inputs";
 
-@import "utils/mixins";
-@import "utils/placeholders";
-@import "utils/variables";
+@import "layout/card";
