@@ -1,0 +1,81 @@
+.container {
+    background-color: $color-primary;
+    border-radius: 2rem;
+    box-shadow: 0 .2rem .8rem rgba($color-neutral-3, .25);
+    color: $color-neutral-3;
+    display: grid;
+    justify-items: center;
+    max-width: 41rem;
+    min-width: 27rem;
+    padding: 6% 3%;
+    padding-bottom: 10%;
+    row-gap: 1.2rem;
+    width: 90%;
+
+    & > :not(:first-child) {
+        background-color: $color-neutral-1;
+        border-radius: 1rem;
+        border-top: .2rem solid rgba($color-neutral-2, .45);
+        padding: 3%;
+        width: 100%;
+    }
+
+    &-bill .item-container .item:nth-child(2),
+    &-split .item-container .item:first-child {
+        display: grid;
+        grid-template-areas: 
+        "title . detail"
+        "input input input";
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: .5rem;
+
+        & > .title {
+            grid-area: title;
+        }
+        & > .detail {
+            grid-area: detail;
+            justify-self: end;
+        }
+        & > input {
+            grid-area: input;
+        }
+    }
+
+    &-bill .item-container .item:not(:nth-child(2)),
+    &-split .item-container .item:not(:first-child) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-bill {
+        & .item-container {
+            & .item:nth-child(3) {
+                padding-bottom: 2rem;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    border-bottom: .1rem solid rgba($color-neutral-3, .4);
+                    bottom: 0;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+.item-container {
+    display: grid;
+    list-style: none;
+    row-gap: 2rem;
+    & .item {
+        & input[type="number"] {
+            width: 80%;
+        }
+    }
+}

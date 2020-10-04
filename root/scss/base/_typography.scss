@@ -1,0 +1,33 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {      
+    font-size: 1.4rem;
+
+    & .item-container .item * {
+        font-size: 1.15em;
+        font-weight: 400;
+    }
+}
+
+.container-bill {
+    & .item-container {
+        & .item:last-child > * {
+            font-weight: 700;
+        }
+    }
+
+}
+
+.heading-primary {
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+input[type="number"],
+input[type="range"] {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
